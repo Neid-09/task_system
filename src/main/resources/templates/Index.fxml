@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quinma.task_system.controllerFX.IndexControllerFX">
+   <center>
+      <TableView fx:id="tblTareas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colTarea" prefWidth="75.0" text="Tarea" />
+            <TableColumn fx:id="colResponsable" prefWidth="75.0" text="Responsable" />
+            <TableColumn fx:id="colEstado" prefWidth="75.0" text="Estado" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <padding>
+      <Insets bottom="4.0" left="14.0" right="14.0" top="4.0" />
+   </padding>
+   <bottom>
+   <Label text="Desarrollado por NeiderGM" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+   </Label>
+</bottom>
+   <left>
+      <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="840.0" prefWidth="246.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Tarea: " />
+            <TextField fx:id="txtTarea" promptText="Tarea a realizar...">
+               <VBox.margin>
+                  <Insets bottom="14.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Responsable:" />
+            <TextField fx:id="txtResponsable" promptText="Quien la realiza?...">
+               <VBox.margin>
+                  <Insets bottom="14.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets right="14.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="BIENVENIDO(A) A SYSTEM TASK">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
